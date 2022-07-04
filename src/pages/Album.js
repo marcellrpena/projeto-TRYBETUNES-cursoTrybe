@@ -1,11 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 class Album extends React.Component {
   render() {
     return (
       <div data-testid="page-album">
-        <header>cabeçalho</header>
-        <nav>Barra de navegação</nav>
+        <Header />
         <main>
           Conteúdo
         </main>

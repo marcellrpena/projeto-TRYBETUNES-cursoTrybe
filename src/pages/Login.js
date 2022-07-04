@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 
 class Login extends React.Component {
+  mounted = false;
+
   constructor() {
     super();
     this.state = {
@@ -11,6 +13,14 @@ class Login extends React.Component {
       loading: false,
       loged: false,
     };
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
   }
 
   onInputChange = ({ target }) => {
@@ -26,10 +36,12 @@ class Login extends React.Component {
     this.setState({ loading: true });
     const { userName } = this.state;
     await createUser({ name: userName });
-    this.setState({
-      loading: false,
-      loged: true,
-    });
+    if (this.mounted) {
+      this.setState({
+        loading: false,
+        loged: true,
+      });
+    }
   };
 
   render() {

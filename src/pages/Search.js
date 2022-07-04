@@ -1,11 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 class Search extends React.Component {
   render() {
     return (
       <div data-testid="page-search">
-        <header>cabeçalho</header>
-        <nav>Barra de navegação</nav>
+        <Header />
         <main>
           Conteúdo
           <div>
