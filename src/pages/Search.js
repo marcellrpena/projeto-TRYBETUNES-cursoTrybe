@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import AlbunsCard from '../components/AlbunsCard';
 
 class Search extends React.Component {
   constructor() {
@@ -8,6 +10,9 @@ class Search extends React.Component {
     this.state = {
       searchArtist: '',
       minLength: true,
+      searchList: [],
+      loading: false,
+      lastSearch: '',
     };
   }
 
@@ -21,8 +26,22 @@ class Search extends React.Component {
     );
   }
 
+  onButtonClick = async (e) => {
+    e.preventDefault();
+    this.setState({ loading: true });
+    const { searchArtist } = this.state;
+    const list = await searchAlbumsAPI(searchArtist);
+    this.setState((prev) => ({
+      lastSearch: prev.searchArtist,
+      searchArtist: '',
+      searchList: list,
+      loading: false,
+      minLength: true,
+    }));
+  }
+
   render() {
-    const { minLength, searchArtist } = this.state;
+    const { minLength, searchArtist, searchList, loading, lastSearch } = this.state;
     return (
       <div data-testid="page-search">
         <Header />
@@ -40,11 +59,30 @@ class Search extends React.Component {
               name="search"
               disabled={ minLength }
               data-testid="search-artist-button"
-              /* onClick={ this.onButtonClick } */
+              onClick={ this.onButtonClick }
             >
               Pesquisar
             </button>
           </form>
+          {
+            loading ? <p>Carregando...</p> : (
+              <div>
+                {
+                  lastSearch !== '' && (
+                    <div>
+                      {
+                        searchList.length > 0 ? (
+                          <AlbunsCard
+                            searchList={ searchList }
+                            lastSearch={ lastSearch }
+                          />
+                        ) : <p>Nenhum álbum foi encontrado</p>
+                      }
+                    </div>
+                  )
+                }
+              </div>)
+          }
         </main>
       </div>
     );
