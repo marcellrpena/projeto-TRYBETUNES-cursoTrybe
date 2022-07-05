@@ -19,7 +19,11 @@ class AlbunsCard extends React.Component {
                 key={ album.collectionId }
                 to={ `/album/${album.collectionId}` }
               >
-                <div>{ album.collectionName }</div>
+                <div>
+                  <img src={ album.artworkUrl100 } alt={ album.collectionName } />
+                  <h1>{ album.collectionName }</h1>
+                  <h4>{ album.artistName }</h4>
+                </div>
               </Link>))}
           </section>
         </div>
