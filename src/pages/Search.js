@@ -26,18 +26,20 @@ class Search extends React.Component {
     );
   }
 
-  onButtonClick = async (e) => {
+  onButtonClick = (e) => {
     e.preventDefault();
     this.setState({ loading: true });
-    const { searchArtist } = this.state;
-    const list = await searchAlbumsAPI(searchArtist);
-    this.setState((prev) => ({
-      lastSearch: prev.searchArtist,
-      searchArtist: '',
-      searchList: list,
-      loading: false,
-      minLength: true,
-    }));
+    /* const { searchArtist } = this.state; */
+    this.setState(async (prev) => {
+      const list = await searchAlbumsAPI(prev.searchArtist);
+      this.setState({
+        lastSearch: prev.searchArtist,
+        searchArtist: '',
+        searchList: list,
+        loading: false,
+        minLength: true,
+      });
+    });
   }
 
   render() {
@@ -73,7 +75,7 @@ class Search extends React.Component {
                       {
                         searchList.length > 0 ? (
                           <AlbunsCard
-                            searchList={ searchList }
+                            albumList={ searchList }
                             lastSearch={ lastSearch }
                           />
                         ) : <p>Nenhum álbum foi encontrado</p>

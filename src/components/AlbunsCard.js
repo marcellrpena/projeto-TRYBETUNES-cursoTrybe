@@ -6,14 +6,14 @@ class AlbunsCard extends React.Component {
   render() {
     const {
       lastSearch,
-      searchList,
+      albumList,
     } = this.props;
     return (
       <section>
         <div>
           <p>{`Resultado de álbuns de: ${lastSearch}`}</p>
           <section>
-            { searchList.map((album) => (
+            { albumList.map((album) => (
               <Link
                 data-testid={ `link-to-album-${album.collectionId}` }
                 key={ album.collectionId }
@@ -33,7 +33,7 @@ class AlbunsCard extends React.Component {
 }
 
 AlbunsCard.propTypes = {
-  searchList: PropTypes.arrayOf.isRequired,
+  albumList: PropTypes.shape([]).isRequired,
   lastSearch: PropTypes.string.isRequired,
 };
 

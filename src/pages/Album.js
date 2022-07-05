@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
+import MusicCard from './MusicCard';
 
 class Album extends React.Component {
   constructor() {
@@ -23,7 +24,6 @@ class Album extends React.Component {
 
   render() {
     const { albumContent, loadingMusic } = this.state;
-    console.log(albumContent);
     return (
       <div>
         <Header />
@@ -41,19 +41,8 @@ class Album extends React.Component {
               <aside>
                 { albumContent.map((album, index) => (
                   index > 0 && (
-                    <div key={ index }>
-                      <h1>{album.trackName}</h1>
-                      <audio
-                        data-testid="audio-component"
-                        src={ album.previewUrl }
-                        controls
-                      >
-                        <track kind="captions" />
-                        {
-                          `O seu navegador não suporta o elemento{" "}
-                          ${<code>audio</code>}.`
-                        }
-                      </audio>
+                    <div key={ album.trackId }>
+                      <MusicCard album={ album } />
                     </div>)))}
               </aside>
             </div>)
