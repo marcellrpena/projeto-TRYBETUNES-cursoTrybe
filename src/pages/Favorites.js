@@ -21,12 +21,13 @@ class Favorites extends React.Component {
     });
   }
 
-  onCheckFavorite = async (album) => {
+  onCheckFavorite = async ({ target }, album) => {
     this.setState({
       loading: true });
     await removeSong(album);
     this.setState({
       loading: false,
+      check: target.checked,
       favoriteList: await getFavoriteSongs(),
     });
   }
@@ -61,7 +62,7 @@ class Favorites extends React.Component {
                         id="favorite"
                         data-testid={ `checkbox-music-${song.trackId}` }
                         checked={ check }
-                        onChange={ () => this.onCheckFavorite(song) }
+                        onChange={ (e) => this.onCheckFavorite(e, song) }
                       />
                     </label>
                   </div>

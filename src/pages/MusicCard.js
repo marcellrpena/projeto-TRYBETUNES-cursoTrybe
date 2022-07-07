@@ -12,18 +12,6 @@ class MusicCard extends React.Component {
     };
   }
 
-  /* componentDidMount() {
-    const { album } = this.props;
-    if (localStorage.getItem('favoriteSongs') === null) {
-      localStorage.setItem('favoriteSongs', JSON.stringify([]));
-    } else {
-      const favoriteList = JSON.parse(localStorage.getItem('favoriteSongs'));
-      this.setState({
-        isChecked: favoriteList.some((favorite) => favorite === album.trackId),
-      });
-    }
-  } */
-
   async componentDidMount() {
     const { album } = this.props;
     this.setState({ loading: true });
