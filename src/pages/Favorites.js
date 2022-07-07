@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
-class MusicCard extends React.Component {
+class Favorites extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -75,4 +75,4 @@ class MusicCard extends React.Component {
   }
 }
 
-export default MusicCard;
+export default Favorites;
