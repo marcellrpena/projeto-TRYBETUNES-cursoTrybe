@@ -8,7 +8,7 @@ class MusicCard extends React.Component {
     this.state = {
       loading: false,
       check: false,
-      /* favoriteList: [], */
+      favoriteList: [],
     };
   }
 
@@ -33,7 +33,6 @@ class MusicCard extends React.Component {
         favoriteSongs.length > 0 ? favoriteSongs
           .some((favorite) => favorite.trackId === album.trackId) : false),
       loading: false,
-      /* favoriteList: favoriteSongs, */
     });
   }
 
@@ -65,8 +64,9 @@ class MusicCard extends React.Component {
   }
 
   render() {
-    const { loading, check } = this.state;
+    const { loading, check, favoriteList } = this.state;
     const { album } = this.props;
+    console.log(favoriteList);
     return (
       <div>
         {

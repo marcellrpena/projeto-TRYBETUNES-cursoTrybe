@@ -34,7 +34,7 @@ class MusicCard extends React.Component {
   render() {
     const { loading, check, favoriteList } = this.state;
     return (
-      <div>
+      <div data-testid="page-favorites">
         <Header />
         {
           loading ? <p>Carregando...</p> : (
