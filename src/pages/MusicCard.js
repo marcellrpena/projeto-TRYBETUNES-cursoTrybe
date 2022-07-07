@@ -88,6 +88,7 @@ class MusicCard extends React.Component {
                 Favorita
                 <input
                   type="checkbox"
+                  id="favorite"
                   data-testid={ `checkbox-music-${album.trackId}` }
                   checked={ check }
                   onChange={ (e) => this.onCheckFavorite(e, album) }
