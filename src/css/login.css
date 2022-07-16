@@ -1,0 +1,39 @@
+.page-body {
+  align-items: center;
+  background-color: #117a37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.blank {
+  display: none;
+}
+
+.form-login {
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 1px 0 8px 2px rgba(0, 0, 0, 0.535);
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.btn-outline-success {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 0 8px 2px rgba(0, 0, 0, 0.535);
+  color: black;
+  width: 150px;
+}
+
+.input-name {
+  box-shadow: 1px 0 8px 2px rgba(0, 0, 0, 0.535);
+}

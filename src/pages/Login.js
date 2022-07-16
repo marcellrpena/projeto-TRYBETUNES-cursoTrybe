@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
+import '../css/login.css';
 
 class Login extends React.Component {
   mounted = false;
@@ -50,26 +51,38 @@ class Login extends React.Component {
       <div data-testid="page-login">
         {
           loading ? <p>Carregando...</p> : (
-            <form>
-              { loged && <Redirect to="/search" /> }
-              <input
-                data-testid="login-name-input"
-                type="text"
-                name="userName"
-                placeholder="Name"
-                value={ userName }
-                onChange={ this.onInputChange }
-              />
-              <button
-                type="submit"
-                name="entrar"
-                disabled={ minLength }
-                data-testid="login-submit-button"
-                onClick={ this.onButtonClick }
-              >
-                Entrar
-              </button>
-            </form>)
+            <div className="page-body">
+              <form className="form-login">
+                { loged && <Redirect to="/search" /> }
+                <label htmlFor="login" className="form-floating mb-3">
+                  <input
+                    className="form-control input-name"
+                    data-testid="login-name-input"
+                    type="text"
+                    id="login"
+                    name="userName"
+                    placeholder="Name"
+                    value={ userName }
+                    onChange={ this.onInputChange }
+                  />
+                  <label htmlFor="login">
+                    Digite seu Nome
+                    <input className="blank" />
+                  </label>
+                </label>
+                <button
+                  type="submit"
+                  className="btn btn-outline-success"
+                  name="entrar"
+                  disabled={ minLength }
+                  data-testid="login-submit-button"
+                  onClick={ this.onButtonClick }
+                >
+                  Entrar
+                </button>
+              </form>
+            </div>
+          )
         }
       </div>
     );
