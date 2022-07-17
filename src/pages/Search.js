@@ -63,7 +63,7 @@ class Search extends React.Component {
             </label>
             <button
               type="submit"
-              className="btn btn-secondary"
+              className="btn btn-primary"
               name="search"
               disabled={ minLength }
               data-testid="search-artist-button"
