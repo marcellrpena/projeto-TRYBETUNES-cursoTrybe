@@ -1,0 +1,11 @@
+.music-style {
+  align-items: center;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+.music-name {
+  color: white;
+  width: 300px;
+}

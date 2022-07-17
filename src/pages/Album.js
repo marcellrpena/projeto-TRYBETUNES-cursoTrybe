@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from './MusicCard';
+import '../css/album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -25,24 +26,26 @@ class Album extends React.Component {
   render() {
     const { albumContent, loadingMusic } = this.state;
     return (
-      <div>
+      <div className="page-body-2">
         <Header />
         {
           loadingMusic ? <p>Carregando...</p> : (
-            <div data-testid="page-album">
-              <aside>
+            <div className="main" data-testid="page-album">
+              <aside className="info-card">
                 <img
+                  className="image-card"
                   src={ albumContent[0].artworkUrl100 }
                   alt={ albumContent[0].collectionName }
                 />
                 <h1 data-testid="album-name">{ albumContent[0].collectionName }</h1>
                 <h4 data-testid="artist-name">{ albumContent[0].artistName }</h4>
               </aside>
-              <aside>
+              <aside className="music-list">
                 { albumContent.map((album, index) => (
                   index > 0 && (
                     <div key={ album.trackId }>
                       <MusicCard album={ album } />
+                      <hr />
                     </div>)))}
               </aside>
             </div>)

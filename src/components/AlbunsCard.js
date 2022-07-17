@@ -23,7 +23,7 @@ class AlbunsCard extends React.Component {
               >
                 <div className="card">
                   <img
-                    className="image-card"
+                    className="image-size"
                     src={ album.artworkUrl100 }
                     alt={ album.collectionName }
                   />

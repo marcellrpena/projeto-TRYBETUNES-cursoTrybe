@@ -1,6 +1,18 @@
 .header-main {
-  height: 60px;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
   width: 100%;
+}
+
+.image-logo {
+  padding-left: 30px;
+}
+
+.user-name {
+  color: white;
+  padding-right: 30px;
 }
 
 .header-elements {

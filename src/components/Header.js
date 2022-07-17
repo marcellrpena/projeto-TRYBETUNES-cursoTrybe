@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import '../css/header.css';
+import logo4 from '../images/logo4.png';
 
 class Header extends React.Component {
   constructor() {
@@ -33,9 +34,16 @@ class Header extends React.Component {
                   className="header-main"
                   data-testid="header-component"
                 >
-                  <div>
+                  <div className="image-logo">
+                    <img src={ logo4 } alt="logomarca-Music-tunes" />
+                  </div>
+                  <div className="user-name">
                     {/* <img src={} alt={ userName } /> */}
-                    <h3 data-testid="header-user-name">{ userName }</h3>
+                    <h3
+                      data-testid="header-user-name"
+                    >
+                      { userName }
+                    </h3>
                   </div>
                 </header>
                 <nav className="navbar">

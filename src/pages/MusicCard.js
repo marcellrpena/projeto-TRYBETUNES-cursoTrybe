@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../css/musicCard.css';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -57,8 +58,8 @@ class MusicCard extends React.Component {
       <div>
         {
           loading ? <p>Carregando...</p> : (
-            <div>
-              <h1>{album.trackName}</h1>
+            <div className="music-style">
+              <h4 className="music-name">{album.trackName}</h4>
               <audio
                 data-testid="audio-component"
                 src={ album.previewUrl }

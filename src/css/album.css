@@ -1,0 +1,49 @@
+.page-body-2 {
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.image-card {
+  border-radius: 6px 6px 0 0;
+  height: 290px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info-card {
+  align-items: center;
+  background-color: rgb(31, 31, 31);
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 1px white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+}
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  overflow-y: scroll;
+  width: 800px;
+}
+
+hr {
+  background-color: white;
+  border: none;
+  height: 2px;
+  margin-bottom: 0;
+  margin-top: 25px;
+  width: 750px;
+}
