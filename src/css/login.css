@@ -20,11 +20,11 @@
   box-shadow: 3px 2px 9px 1px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: -50px;
   height: 180px;
   justify-content: center;
   margin: 0 auto;
+  position: relative;
+  top: -50px;
   width: 500px;
 }
 
@@ -35,11 +35,6 @@
   color: black;
   width: 150px;
 }
-
-/* .btn-outline-success:hover {
-  box-shadow: 3px 2px 9px 1px rgba(0, 0, 0, 0.7);
-
-} */
 
 .input-name {
   box-shadow: 3px 2px 9px 1px rgba(0, 0, 0, 0.7);
