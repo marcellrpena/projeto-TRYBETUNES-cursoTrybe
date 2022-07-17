@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbunsCard from '../components/AlbunsCard';
+import '../css/search.css';
 
 class Search extends React.Component {
   constructor() {
@@ -45,19 +46,24 @@ class Search extends React.Component {
   render() {
     const { minLength, searchArtist, searchList, loading, lastSearch } = this.state;
     return (
-      <div data-testid="page-search">
+      <div className="page-body-2" data-testid="page-search">
         <Header />
         <main>
-          <form>
-            <input
-              data-testid="search-artist-input"
-              type="text"
-              placeholder="Nome do Artista"
-              value={ searchArtist }
-              onChange={ this.onInputChange }
-            />
+          <form className="form-search">
+            <label htmlFor="search">
+              <input
+                data-testid="search-artist-input"
+                className="form-control"
+                id="search"
+                type="text"
+                placeholder="Nome do Artista"
+                value={ searchArtist }
+                onChange={ this.onInputChange }
+              />
+            </label>
             <button
               type="submit"
+              className="btn btn-secondary"
               name="search"
               disabled={ minLength }
               data-testid="search-artist-button"

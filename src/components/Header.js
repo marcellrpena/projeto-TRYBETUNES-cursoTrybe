@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import '../css/header.css';
 
 class Header extends React.Component {
   constructor() {
@@ -27,8 +28,9 @@ class Header extends React.Component {
         {
           loading ? <p>Carregando...</p>
             : (
-              <div>
+              <div className="header-elements">
                 <header
+                  className="header-main"
                   data-testid="header-component"
                 >
                   <div>
@@ -36,20 +38,40 @@ class Header extends React.Component {
                     <h3 data-testid="header-user-name">{ userName }</h3>
                   </div>
                 </header>
-                <nav>
-                  <Link data-testid="link-to-search" to="/search"><h1>Pesquisa</h1></Link>
-                  <Link
-                    data-testid="link-to-favorites"
-                    to="/favorites"
-                  >
-                    <h1>Favoritas</h1>
-                  </Link>
-                  <Link
-                    data-testid="link-to-profile"
-                    to="/profile"
-                  >
-                    <h1>Perfil</h1>
-                  </Link>
+                <nav className="navbar">
+                  <div className="max-width">
+                    <Link
+                      className="decoration"
+                      data-testid="link-to-search"
+                      to="/search"
+                    >
+                      <h1 className="links">
+                        Pesquisa
+                      </h1>
+                    </Link>
+                  </div>
+                  <div className="max-width">
+                    <Link
+                      className="decoration"
+                      data-testid="link-to-favorites"
+                      to="/favorites"
+                    >
+                      <h1 className="links">
+                        Favoritas
+                      </h1>
+                    </Link>
+                  </div>
+                  <div className="max-width">
+                    <Link
+                      className="decoration"
+                      data-testid="link-to-profile"
+                      to="/profile"
+                    >
+                      <h1 className="links">
+                        Perfil
+                      </h1>
+                    </Link>
+                  </div>
                 </nav>
               </div>)
         }
