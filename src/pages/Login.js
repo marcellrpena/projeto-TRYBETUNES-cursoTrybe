@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import '../css/login.css';
+import logo5 from '../images/logo5.png';
 
 class Login extends React.Component {
   mounted = false;
@@ -52,6 +53,7 @@ class Login extends React.Component {
         {
           loading ? <p>Carregando...</p> : (
             <div className="page-body">
+              <img className="image-position" src={ logo5 } alt="Logomarca Music Tunes" />
               <form className="form-login">
                 { loged && <Redirect to="/search" /> }
                 <label htmlFor="login" className="form-floating mb-3">
