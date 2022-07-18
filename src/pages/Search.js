@@ -44,16 +44,17 @@ class Search extends React.Component {
   }
 
   render() {
-    const { minLength, searchArtist, searchList, loading, lastSearch } = this.state;
+    const {
+      minLength, searchArtist, searchList, loading, lastSearch } = this.state;
     return (
-      <div className="page-body-2" data-testid="page-search">
-        <Header />
+      <div className="page-body-search" data-testid="page-search">
+        <Header actualPage="pageSearch" />
         <main>
           <form className="form-search">
             <label htmlFor="search">
               <input
                 data-testid="search-artist-input"
-                className="form-control"
+                className="shadow-search form-control"
                 id="search"
                 type="text"
                 placeholder="Nome do Artista"
@@ -63,7 +64,7 @@ class Search extends React.Component {
             </label>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn-search btn btn-danger"
               name="search"
               disabled={ minLength }
               data-testid="search-artist-button"

@@ -74,7 +74,7 @@ class Login extends React.Component {
                 </label>
                 <button
                   type="submit"
-                  className="btn btn-outline-success"
+                  className="btn-login btn btn-outline-success"
                   name="entrar"
                   disabled={ minLength }
                   data-testid="login-submit-button"

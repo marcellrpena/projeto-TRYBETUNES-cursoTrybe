@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import { removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../css/favorite.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -35,15 +36,15 @@ class Favorites extends React.Component {
   render() {
     const { loading, check, favoriteList } = this.state;
     return (
-      <div data-testid="page-favorites">
-        <Header />
+      <div className="page-body-2" data-testid="page-favorites">
+        <Header actualPage="pageFavorite" />
         {
           loading ? <p>Carregando...</p> : (
-            <div>
+            <div className="music-list-favorite">
               {
                 favoriteList.map((song) => (
-                  <div key={ song.trackId }>
-                    <h1>{song.trackName}</h1>
+                  <div className="music-style" key={ song.trackId }>
+                    <h4 className="music-name">{song.trackName}</h4>
                     <audio
                       data-testid="audio-component"
                       src={ song.previewUrl }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getUser } from '../services/userAPI';
 import '../css/header.css';
 import logo4 from '../images/logo4.png';
@@ -24,6 +25,7 @@ class Header extends React.Component {
 
   render() {
     const { userName, loading } = this.state;
+    const { actualPage } = this.props;
     return (
       <section>
         {
@@ -53,7 +55,9 @@ class Header extends React.Component {
                       data-testid="link-to-search"
                       to="/search"
                     >
-                      <h1 className="links">
+                      <h1
+                        className={ actualPage === 'pageSearch' ? 'pageSearch' : 'links' }
+                      >
                         Pesquisa
                       </h1>
                     </Link>
@@ -64,7 +68,10 @@ class Header extends React.Component {
                       data-testid="link-to-favorites"
                       to="/favorites"
                     >
-                      <h1 className="links">
+                      <h1
+                        className={ actualPage === 'pageFavorite'
+                          ? 'pageFavorite' : 'links' }
+                      >
                         Favoritas
                       </h1>
                     </Link>
@@ -75,7 +82,10 @@ class Header extends React.Component {
                       data-testid="link-to-profile"
                       to="/profile"
                     >
-                      <h1 className="links">
+                      <h1
+                        className={ actualPage === 'pagePerfil'
+                          ? 'pageSearch' : 'links' }
+                      >
                         Perfil
                       </h1>
                     </Link>
@@ -87,5 +97,9 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  actualPage: PropTypes.string,
+}.isRequired;
 
 export default Header;

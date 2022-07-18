@@ -31,7 +31,7 @@ class Album extends React.Component {
         {
           loadingMusic ? <p>Carregando...</p> : (
             <div className="main" data-testid="page-album">
-              <aside className="info-card">
+              <aside className="info-card-album">
                 <img
                   className="image-card"
                   src={ albumContent[0].artworkUrl100 }

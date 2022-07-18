@@ -18,11 +18,11 @@
   justify-content: space-evenly;
 }
 
-.info-card-album {
+.info-card {
   align-items: center;
   background-color: rgb(31, 31, 31);
   border-radius: 6px;
-  box-shadow: 3px 2px 9px 1px rgba(255, 6, 6, 0.7);
+  box-shadow: 1px 1px 3px 1px white;
   color: white;
   display: flex;
   flex-direction: column;
@@ -30,13 +30,12 @@
   width: 400px;
 }
 
-.music-list {
+.music-list-favorite {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  height: 400px;
-  overflow-y: scroll;
-  width: 800px;
+  width: 100%;
 }
 
 hr {
@@ -46,4 +45,16 @@ hr {
   margin-bottom: 0;
   margin-top: 25px;
   width: 750px;
+}
+
+.music-style {
+  align-items: center;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+.music-name {
+  color: white;
+  width: 300px;
 }
