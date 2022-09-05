@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbunsCard from '../components/AlbunsCard';
@@ -46,9 +47,11 @@ class Search extends React.Component {
   render() {
     const {
       minLength, searchArtist, searchList, loading, lastSearch } = this.state;
+    const { history } = this.props;
+    console.log(history.location.pathname);
     return (
       <div className="page-body-search" data-testid="page-search">
-        <Header actualPage="pageSearch" />
+        <Header actualPage="pageSearch" history={ history.location.pathname } />
         <main>
           <form className="form-search">
             <label htmlFor="search">
@@ -97,5 +100,9 @@ class Search extends React.Component {
     );
   }
 }
+
+Search.propTypes = {
+  history: PropTypes.shape({}),
+}.isRequired;
 
 export default Search;

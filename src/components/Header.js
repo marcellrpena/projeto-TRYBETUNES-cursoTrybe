@@ -25,7 +25,8 @@ class Header extends React.Component {
 
   render() {
     const { userName, loading } = this.state;
-    const { actualPage } = this.props;
+    const { actualPage, history } = this.props;
+    const testHistory = history || ' ';
     return (
       <section>
         {
@@ -39,7 +40,7 @@ class Header extends React.Component {
                   <div className="image-logo">
                     <img src={ logo4 } alt="logomarca-Music-tunes" />
                   </div>
-                  <div className="user-name">
+                  <div className={ testHistory === '/search' ? 'black' : 'user-name' }>
                     {/* <img src={} alt={ userName } /> */}
                     <h3
                       data-testid="header-user-name"

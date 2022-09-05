@@ -15,6 +15,11 @@
   padding-right: 30px;
 }
 
+.black {
+  color: black;
+  padding-right: 30px;
+}
+
 .header-elements {
   align-items: center;
   display: flex;
