@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projeto-TRYBETUNES-cursoTrybe/static/css/main.50cde025.chunk.css",
+    "main.css": "/projeto-TRYBETUNES-cursoTrybe/static/css/main.7150bbef.chunk.css",
     "main.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.0e73c5f7.chunk.js",
     "main.js.map": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.0e73c5f7.chunk.js.map",
     "runtime-main.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/runtime-main.45b2bf32.js",
@@ -8,7 +8,7 @@
     "static/js/2.78fea092.chunk.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/2.78fea092.chunk.js",
     "static/js/2.78fea092.chunk.js.map": "/projeto-TRYBETUNES-cursoTrybe/static/js/2.78fea092.chunk.js.map",
     "index.html": "/projeto-TRYBETUNES-cursoTrybe/index.html",
-    "static/css/main.50cde025.chunk.css.map": "/projeto-TRYBETUNES-cursoTrybe/static/css/main.50cde025.chunk.css.map",
+    "static/css/main.7150bbef.chunk.css.map": "/projeto-TRYBETUNES-cursoTrybe/static/css/main.7150bbef.chunk.css.map",
     "static/js/2.78fea092.chunk.js.LICENSE.txt": "/projeto-TRYBETUNES-cursoTrybe/static/js/2.78fea092.chunk.js.LICENSE.txt",
     "static/media/logo2.2d1ccfd5.png": "/projeto-TRYBETUNES-cursoTrybe/static/media/logo2.2d1ccfd5.png",
     "static/media/logo4.5713ad7b.png": "/projeto-TRYBETUNES-cursoTrybe/static/media/logo4.5713ad7b.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.45b2bf32.js",
     "static/js/2.78fea092.chunk.js",
-    "static/css/main.50cde025.chunk.css",
+    "static/css/main.7150bbef.chunk.css",
     "static/js/main.0e73c5f7.chunk.js"
   ]
 }
