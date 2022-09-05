@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/projeto-TRYBETUNES-cursoTrybe/static/css/main.a18ed746.chunk.css",
-    "main.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.6d3848b1.chunk.js",
-    "main.js.map": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.6d3848b1.chunk.js.map",
+    "main.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.5bbcbf6a.chunk.js",
+    "main.js.map": "/projeto-TRYBETUNES-cursoTrybe/static/js/main.5bbcbf6a.chunk.js.map",
     "runtime-main.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/runtime-main.45b2bf32.js",
     "runtime-main.js.map": "/projeto-TRYBETUNES-cursoTrybe/static/js/runtime-main.45b2bf32.js.map",
     "static/js/2.b8f00333.chunk.js": "/projeto-TRYBETUNES-cursoTrybe/static/js/2.b8f00333.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.45b2bf32.js",
     "static/js/2.b8f00333.chunk.js",
     "static/css/main.a18ed746.chunk.css",
-    "static/js/main.6d3848b1.chunk.js"
+    "static/js/main.5bbcbf6a.chunk.js"
   ]
 }
